@@ -56,30 +56,33 @@
 }
 
 .fa-twitter {
-    background: #4f6696;
+    background-color: rgb(2, 158, 255);
     color: white;
-    position: relative;
-    border: 1px solid white;
+    border: none;
+    height: 18px;
+    width: 70px;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 80px;
+    cursor: pointer;
+    margin-right: none;  
 }
 
 .fa-facebook {
     background: #3B5998;
     color: white;
-    position: relative;
     border: 1px solid white;
 }
 
 .fa-linkedin {
     background: rgb(184, 32, 32);
     color: black;
-    position: relative;
     border: 1px solid white;
 }
 
 .fa-instagram {
     background: rgb(170, 50, 6);
     color: white;
-    position: relative;
     border: 1px solid white;
 }
 
