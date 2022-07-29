@@ -16,6 +16,7 @@
     padding: auto;
     display: flex;
     align-items: center;
+    margin-left: 10px;
     justify-content: space-between;
 }
 .navbar ul li{
@@ -33,11 +34,11 @@
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: #32a3e4;
     position: absolute;
     left: 0;
     bottom: -10px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .navbar ul li:hover::after{
     width: 100%;
@@ -50,48 +51,58 @@
     text-align: center;
     color: #fff;
 }
-
 .fa:hover {
     opacity: 0.9;
+    box-shadow: 3px 3px 3px rgba(206, 21, 107);
+}
+.fa:active {
+    opacity: 0.8;
 }
 
 .fa-twitter {
     background-color: rgb(2, 158, 255);
     color: white;
-    border: none;
-    height: 18px;
-    width: 70px;
     border-radius: 35px;
     font-weight: bold;
     font-size: 80px;
     cursor: pointer;
-    margin-right: none;  
+    margin-right: none;
+    transition: box-shadow 0.18s; 
 }
 
 .fa-facebook {
     background: #3B5998;
     color: white;
-    border: 1px solid white;
+    border-radius: 35px;
+    transition: box-shadow 0.18s;
 }
 
 .fa-linkedin {
-    background: rgb(184, 32, 32);
-    color: black;
-    border: 1px solid white;
+    background: rgb(10, 102, 194);
+    color: white;
+    border-radius: 35px;
+    transition: box-shadow 0.18s;
 }
 
 .fa-instagram {
-    background: rgb(170, 50, 6);
+    background: rgb(255, 127, 7);
     color: white;
-    border: 1px solid white;
+    border-radius: 35px;
+    transition: box-shadow 0.18s;
 }
 
 .fa {
-    padding: 20px;
+    padding: 10px;
     font-size: 40px;
+    height: 20px;
     width: 60px;
     text-decoration: none;
-    margin: 5px 80px;
+    margin: 15px;
+    border: 10px;
+    border-radius: 35px; 
+    margin-right: center;
+    margin-left: 14px;
+    margin-top: 12px;
 }
 
 input[type=text], select, textarea {
