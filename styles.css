@@ -180,7 +180,7 @@ nav { display: none; }
 .my-services {
   /*maybe too dark, try to lighten a bit*/
   background-color: var(--clr-dark);
-  background-image: url(miami.jpg);
+  background-image: url(images/miami.jpg);
   background-size: cover;
   background-blend-mode: hard-light;
   color: var(--clr-light);
