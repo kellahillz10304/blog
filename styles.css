@@ -1,140 +1,358 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.banner{
-    width: 100%;
-    height: 100vh;
-    background-image: url(miami.jpg);
-    background-size: cover;
-    background-position: right;
+
+/*custom properties, update these for your own design*/
+
+:root {
+  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: auto;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    justify-content: space-between;
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
 }
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
+
+/*general styles*/
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+/*typography*/
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/*buttons*/
+
+.btn {
+  display: inline-block;
+  padding: .5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.section__title {
+  margin-bottom: .25em;
+}
+
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.sections__subtitle--about {
+  background: var(--clr-accent);
+  padding: .25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+}
+
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
+/*header*/
+
+nav { display: none; }
+
+/*intro section*/
+
+.intro {
+  position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .intro__img {
+    grid-area: img;
+    min-width: 250px;
     position: relative;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-.navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #32a3e4;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.2s;
-}
-.navbar ul li:hover::after{
-    width: 100%;
-}
-.content{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-}
-.fa:hover {
-    opacity: 0.9;
-    box-shadow: 3px 3px 3px rgba(206, 21, 107);
-}
-.fa:active {
-    opacity: 0.8;
+    z-index: 2;
+  }
+
+  .section__subtitle--intro {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
 }
 
-.fa-twitter {
-    background-color: rgb(2, 158, 255);
-    color: white;
-    border-radius: 35px;
-    font-weight: bold;
-    font-size: 80px;
-    cursor: pointer;
-    margin-right: none;
-    transition: box-shadow 0.18s; 
+/*what I do section*/
+
+.my-services {
+  /*maybe too dark, try to lighten a bit*/
+  background-color: var(--clr-dark);
+  background-image: url(miami.jpg);
+  background-size: cover;
+  background-blend-mode: hard-light;
+  color: var(--clr-light);
+  text-align: center;
 }
 
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-    border-radius: 35px;
-    transition: box-shadow 0.18s;
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
 }
 
-.fa-linkedin {
-    background: rgb(10, 102, 194);
-    color: white;
-    border-radius: 35px;
-    transition: box-shadow 0.18s;
+.section__title--services::after {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.5;
 }
 
-.fa-instagram {
-    background: rgb(255, 127, 7);
-    color: white;
-    border-radius: 35px;
-    transition: box-shadow 0.18s;
+.services {
+  margin-bottom: 4em;
 }
 
-.fa {
-    padding: 10px;
-    font-size: 40px;
-    height: 20px;
-    width: 60px;
-    text-decoration: none;
-    margin: 15px;
-    border: 10px;
-    border-radius: 35px; 
-    margin-right: center;
-    margin-left: 14px;
-    margin-top: 12px;
+.service {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service + .service {
+    margin-left: 2em;
+  }
 }
-  
-  /* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+
+/*Who I am/about me section*/
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
 }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
+
+.about-me__img {
+  box-shadow: var(--bs);
 }
-  
-  /* Add a background color and some padding around the form */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: 200px;
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    /*play around with img pixel size*/
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    background-color: var(--clr-accent);
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+  }
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/*my work*/
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__subtitle {
+  color: #16e0bd;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2.5px;
+}
+
+.portfolio__item {
+  background: var(--clr-accent);
+  overflow: hidden;
+}
+
+.portfolio__img {
+  transition: 
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: .5;
+}
+
+
+/*footer*/
+
+.footer {
+  background: black;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 2.5em 0;
+}
+
+.footer a { 
+  color: inherit;
+  text-decoration: none; 
+}
+
+.footer__link {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: .7;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 .5em;
+}
+
+.social-list__link {
+  padding: .5em;
 }
