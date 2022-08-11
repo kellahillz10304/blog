@@ -81,7 +81,9 @@ h3 { font-size: var(--fs-h3) }
 
 /*buttons*/
 
-.btn {
+.btn, 
+.netflix_button,
+.youtube_button {
   display: inline-block;
   padding: .5em 2.5em;
   background: var(--clr-accent);
@@ -95,9 +97,12 @@ h3 { font-size: var(--fs-h3) }
   transition: transform 200ms ease-in-out;
 }
 
-.btn:hover {
+.btn:hover,
+.netflix_button:hover,
+.youtube_button:hover {
   transform: scale(1.1);
 }
+
 
 .section__title {
   margin-bottom: .25em;
@@ -153,7 +158,7 @@ header {
   right: 0;
   z-index: 100;
   transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(.5, 0, .5, 1)
+  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
 .nav__list {
@@ -240,6 +245,7 @@ header {
 
 .intro {
   position: relative;
+  width: 100%;
 }
 
 .intro__img {
@@ -290,11 +296,12 @@ header {
   background-blend-mode: hard-light;
   color: var(--clr-light);
   text-align: center;
+  -ms-grid-column-align: center;
 }
 
 .section__title--services {
   color: var(--clr-accent);
-  position: relative;
+  position: center;
 }
 
 .section__title--services::after {
@@ -309,11 +316,13 @@ header {
 
 .services {
   margin-bottom: 4em;
+  position: center;
 }
 
 .service {
   max-width: 500px;
   margin: 0 auto;
+  position: center;
 }
 
 
@@ -326,7 +335,7 @@ header {
   }
 
   .service + .service {
-    margin-left: 2em;
+    margin-left: 1em;
   }
 }
 
@@ -367,14 +376,14 @@ header {
     width: calc(100% + 2em);
     padding-left: 2em;
     padding-top: calc(1em);
-    padding-right: calc(300px + 2em);
+    padding-right: calc(200px + 2em);
+    padding-bottom: 1em;
   }
 
   .about-me__img {
     grid-area: img;
     position: relative;
     z-index: 2;
-  }
 }
 
 /*my work*/
@@ -421,6 +430,14 @@ header {
   opacity: .5;
 }
 
+.youtube_button {
+  
+
+}
+
+.netflix_button {
+
+}
 
 /*footer*/
 
