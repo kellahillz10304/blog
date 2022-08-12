@@ -1,181 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Portfolio</title>
-    <script src="https://kit.fontawesome.com/1bcc299dd0.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-        
-    <link rel="stylesheet" href="styles.css">
 
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <i class="fa-solid fa-asterisk"></i>
-      </div>
-      <button class="nav-toggle" aria-label="togglenavigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=https://fonts.google.com/specimen/Outfit rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>QR Code</title>
+</head>
 
-    <section class="intro" id="home">
-      <h1 class="section__title section__title--intro">
-        Hi, my name is<strong>Chris</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">Front-End Dev</p>
-      <img src="images/Me.jpg" alt="picture of me smiling" class="intro__img">
-    </section>
+<body>
+  <div class="box-1">
+    <div class="box-2">
+      <img src="image-qr-code.png" alt="QR Code" class="qrcode">
+      <p class="improve">Improve your front-end skills by building projects</p>
+      <p class="scan">Scan the QR code to visit Frontend Mentor<br>and take your coding skills to the next level</p>
+    </div>
+  </div>
+</body>
 
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">What I do</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Design + Development</h3>
-          <p>
-            HTML, CSS, and JavaScript
-          </p>
-        </div>
-
-        <div class="service">
-          <h3>E-Commerce</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi
-          </p>
-        </div>
-
-        <div class="service">
-          <h3>Wordpress</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi
-          </p>
-        </div>
-      </div>
-    
-
-      <a href="#work" class="btn">My Work</a>
-    </section>
-
-
-    <!-- about me -->
-    <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle--about">Miami-based UX deisgner & front-end developer</p>
-
-      <div class="about-me__body">
-        <p>Go checkout <a href="https://www.youtube.com/channel/UCQu-fBwdSWYWsbpIK74bQTg">my cigar channel</a> on YouTube!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-
-      <img class="about-me__img" src="images/phanatic.jpg" alt="phillie phanatic with arms raised">
-    </section>
-
-    <!--My work-->
-    <section class="my-work" id="work">
-      <h2 class="section__title">My work</h2>
-      <div>
-        <p class="section__subtitle">A selection of my range of work</p>
-      </div>
-
-      <div class="portfolio">
-
-        <div>
-          
-          <a href="YouTube/youtube.html" class="portfolio__item">
-            <div>
-              <img src="images/youtube-logo.jpeg" alt="youtube logo">
-          </a>
-            <p>YouTube clone made using <a href="https://www.youtube.com/c/SuperSimpleDev">SuperSimpleDev</a> tutorial</p>
-            </div>
-          <a href="https://github.com/kellahillz10304/YouTube-Clone">
-            <button class="youtube_button">Code</button>
-          </a>
-
-        </div>
-
-        <div>
-          
-          <a href="netflix.html" class="portfolio__item">
-            <div>
-              <img src="images/download.jpeg" alt="netflix logo">
-          </a>
-            <p>Netflix clone made using <a href="https://www.youtube.com/user/THEJawher94/videos"><br>DevOur Code</a> tutorial</p>
-            </div>
-          <a href="https://github.com/kellahillz10304/Netflix-Clone">
-            <button class="netflix_button">Code</button>
-          </a>
-        
-        </div>
-
-        <div>
-          
-          <a href="QR-Code/index.html" class="portfolio__item">
-            <div>
-              <img src="images/desktop-preview.jpg" alt="qr code">
-          </a>
-            <p>QR Code Project from <a href="https://frontendmentor.io">Frontendmentor.com</a></p>
-            </div>
-          <a href="https://github.com/kellahillz10304/QR-Code">
-            <button class="netflix_button">Code</button>
-          </a>
-        
-        </div>
-
-      </div>
-    </section>
-
-    <footer class="footer">
-      <a href="mailto:cjk5029@gmail.com" class="footer__link">cjk5029@gmail.com</a>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://www.facebook.com/profile.php?id=9388740">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://www.linkedin.com/in/christopher-keller-b153b063/">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://www.instagram.com/cjk5029/?hl=en">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://github.com/kellahillz10304">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://twitter.com/christophaa">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://www.youtube.com/channel/UCQu-fBwdSWYWsbpIK74bQTg">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </li>
-      </ul>
-    </footer>
-
-    <script src="index.js"></script>
-  
-  </body>
 </html>
