@@ -350,7 +350,7 @@ header {
   box-shadow: var(--bs);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) { 
   .about-me {
     display: grid;
     /*play around with img pixel size*/
@@ -361,6 +361,7 @@ header {
       "text img";
     grid-column-gap: 2em;
   }
+}
 
   .section__title--about {
     grid-area: title;
