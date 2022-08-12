@@ -1,0 +1,35 @@
+:root {
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --clr-light: hsl(212, 45%, 89%);
+  --clr-dark: hsl(218, 44%, 22%);
+  --clr-accent: hsl(212, 15%, 55%);
+}
+
+body {
+  background: var(--clr-light);
+  color: white;
+  font-size: 15px;
+}
+
+.box-1 {
+  background: white;
+  margin: 50px;
+  margin-left: 200px;
+  border: 25px;
+  border-radius: 15px;
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.improve {
+  font-weight: var(--fw-bold);
+  color: black;
+}
+
+.scan {
+  font-weight: var(--fw-reg);
+  color: var(--clr-accent);
+}
